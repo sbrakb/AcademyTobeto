@@ -28,7 +28,8 @@ namespace DataAccess.Concretes.EntityFramework
                                  CourseId = co.Id,
                                  CourseName = co.Name,
                                  InstructorName = i.FirstName + " " + i.LastName,
-                                 CategoryName = ca.Name
+                                 CategoryName = ca.Name,
+                                 CoursePrice = co.Price
                              };
                 return result.ToList();                           
             }

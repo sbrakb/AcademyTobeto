@@ -44,8 +44,8 @@ static void InstructorTest()
 
     Instructor instructor = new()
     {
-        FirstName = "Halit Enes",
-        LastName = "Kalaycı"
+        FirstName = "Engin",
+        LastName = "Demiroğ"
     };
 
     var addedResult = instructorManager.Add(instructor);

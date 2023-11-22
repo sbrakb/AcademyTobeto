@@ -26,8 +26,8 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
-        [HttpGet("getbyid")]
-        public IActionResult GetById(int id)
+        [HttpGet("get")]
+        public IActionResult Get(int id)
         {
             var result = _courseService.Get(id);
             if (result.Succes)
@@ -63,6 +63,39 @@ namespace WebAPI.Controllers
         public IActionResult Update(Course course)
         {
             var result = _courseService.Update(course);
+            if (result.Succes)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("delete")]
+        public IActionResult Delete(Course course)
+        {
+            var result = _courseService.Delete(course);
+            if (result.Succes)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("deletebyid")]
+        public IActionResult DeleteById(int id)
+        {
+            var result = _courseService.DeleteById(id);
+            if (result.Succes)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("deleteall")]
+        public IActionResult DeleteAll()
+        {
+            var result = _courseService.DeleteAll();
             if (result.Succes)
             {
                 return Ok(result);

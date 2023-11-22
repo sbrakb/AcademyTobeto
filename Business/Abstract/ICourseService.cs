@@ -10,15 +10,10 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ICourseService
+    public interface ICourseService:IGenericService<Course>
     {
-        IDataResult<List<Course>> GetAll();
-        IDataResult<Course> Get(int id);
+
         IDataResult<List<CourseDetailDto>> GetCourseDetails();
-        IResult Add(Course course);
-        IResult Update(Course course);
-        IResult Delete(Course course);
-        IResult DeleteById(int id);
-        IResult DeleteAll();
+
     }
 }

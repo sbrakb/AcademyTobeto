@@ -8,14 +8,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IInstructorService
+    public interface IInstructorService:IGenericService<Instructor>
     {
-        IDataResult<List<Instructor>> GetAll();
-        IDataResult<Instructor> Get(int id);
-        IResult Add(Instructor instructor);
-        IResult Update(Instructor instructor);
-        IResult Delete(Instructor instructor);
-        IResult DeleteById(int id);
-        IResult DeleteAll();
+
     }
 }
